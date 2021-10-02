@@ -8,7 +8,7 @@ The aim of this study is to determine the effect of language varieties on the sp
 
 ## Updated
 Oct 02 2021: 
-- Names of speakers were removed from the datafile and substituted with code stamps: s1 ... s40. 
+- Names of speakers were substituted with code stamps: s1 ... s40. 
 - Paper has been updated.
 
 # Instructions
