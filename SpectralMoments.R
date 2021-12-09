@@ -91,10 +91,6 @@ unstress_cog <- lmer(cog ~Variety * Segment + (1|keyword) + (1|Speaker), data=sm
 summary(unstress_cog)
 emmeans(unstress_cog, list(pairwise ~ Segment*Variety), adjust="tukey")
 
-plot_model(mcog2, type = "pred",  terms = c("Variety", "Segment", "Stress"))
-plot_model(mcog2, type = "int")
-plot_model(mcog2, sort.est = TRUE)
-plot_model(mcog2, type = "std")
 means <- aggregate(cbind(skew) ~  Variety + Segment + Stress, data=sm,mean)
 boxplot(means$skew~means$Segment*means$Variety)
 
@@ -219,10 +215,7 @@ dur_unstressed <- ggplot(sm_unstressed, aes(x = Segment, y = duration, fill = Va
   
   
   boxplot(sm_unstressed$duration~sm_unstressed$Variety*sm_unstressed$Segment, outline=FALSE)
-  library(gplots)
-  # Plot the mean of teeth length by dose groups
-  plotmeans(duration ~ c(Segment,Variety), data = sm_unstressed, frame = FALSE)
-  
+  library(gplots)  
   
   sd_stressed <- ggplot(sm_stressed, aes(x = Segment, y = sdev, fill = Variety)) +
     geom_boxplot(alpha = 0.7, outlier.shape = NA) +
@@ -252,8 +245,7 @@ dur_unstressed <- ggplot(sm_unstressed, aes(x = Segment, y = duration, fill = Va
 
   
   
-  
-  
+
   skew_stressed <- ggplot(sm_stressed, aes(x = Segment, y = skew, fill = Variety)) +
     geom_boxplot(alpha = 0.7, outlier.shape = NA) +
     scale_y_continuous(name = "Skewness",
