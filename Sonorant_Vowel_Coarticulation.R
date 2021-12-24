@@ -16,20 +16,12 @@ options(xtable.timestamp = "")
 # options defaults
 options(digits=2)
 options(scipen=999)
-
-#fm <- subset(fm, Position == "Initial")
 # Set Graphics
-par()              # view current settings
 opar <- par()      # make a copy of current settings
 lwd = 2
 cex = 1.3
 
-
-
-
 fm  <- read.csv("formants.csv", header = T)
-
-
 names(fm)[names(fm)=="F1.5"] <- "F1.05"
 names(fm)[names(fm)=="F2.5"] <- "F2.05"
 names(fm)[names(fm)=="F3.5"] <- "F3.05"
@@ -44,20 +36,13 @@ fm <- fm[c("F1.05", "F1.10", "F1.15", "F1.20", "F1.25", "F1.30", "F1.35", "F1.40
            "X2", "aa", "file.1", "label.1", "duration", "f0_min", "f0_mean", "f0_max", "int_min", "int_mean", "int_max", "F1", 
            "F2", "F3", "Keyword", "Speaker", "Variety", "Segment", "Selection","Position", "Stress", "X", "AA", "file", "label", "Duration")] 
 
-#write.csv(fm, "fm.csv")
-
-
 Vowel <- as.character(fm$Keyword)
 Vowel[grep('[i]', Vowel)] <- "i";
 Vowel[grep('[^i]', Vowel)] <- "a";
 fm$Vowel <- factor(Vowel);
 
-
 aggregate(F1.05 ~ Vowel + Keyword, data=fm, mean)
 aggregate(F1.05 ~ Segment + Vowel + Stress + Variety, data=fm, mean)
-
-
-
 
 descriptives <- function(df)
 {
