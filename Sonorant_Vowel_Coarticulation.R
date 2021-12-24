@@ -4,6 +4,11 @@ source("Definitions.r")
 library("lme4")
 library("lmerTest")
 library("xtable")
+library(pracma)
+library(pdist)
+library(car)
+library(lme4)
+library(lmerTest)
 
 options(xtable.floating = FALSE)
 options(xtable.timestamp = "")
@@ -11,6 +16,16 @@ options(xtable.timestamp = "")
 # options defaults
 options(digits=2)
 options(scipen=999)
+
+#fm <- subset(fm, Position == "Initial")
+# Set Graphics
+par()              # view current settings
+opar <- par()      # make a copy of current settings
+lwd = 2
+cex = 1.3
+
+
+
 
 fm  <- read.csv("formants.csv", header = T)
 
@@ -33,30 +48,15 @@ fm <- fm[c("F1.05", "F1.10", "F1.15", "F1.20", "F1.25", "F1.30", "F1.35", "F1.40
 
 
 Vowel <- as.character(fm$Keyword)
-Vowel[grep('[i]', Vowel)] <- "i"
-Vowel[grep('[^i]', Vowel)] <- "a"
-fm$Vowel <- factor(Vowel)
+Vowel[grep('[i]', Vowel)] <- "i";
+Vowel[grep('[^i]', Vowel)] <- "a";
+fm$Vowel <- factor(Vowel);
 
 
 aggregate(F1.05 ~ Vowel + Keyword, data=fm, mean)
 aggregate(F1.05 ~ Segment + Vowel + Stress + Variety, data=fm, mean)
 
-source("Definitions.R")
-#source("fricatives_formants.R")
-#library(ez)
-library(pracma)
-library(pdist)
-library(car)
-library(lme4)
-library(lmerTest)
 
-
-#fm <- subset(fm, Position == "Initial")
-# Set Graphics
-par()              # view current settings
-opar <- par()      # make a copy of current settings
-lwd = 2
-cex = 1.3
 
 
 descriptives <- function(df)
