@@ -1,0 +1,465 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: z ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f1
+
+REML criterion at convergence: 7810.8
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.0651 -0.4762 -0.0920  0.3726  6.3091 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)  2928     54.11  
+ Keyword  (Intercept)  4889     69.92  
+ Residual             12674    112.58  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error      df t value Pr(>|t|)    
+(Intercept)                433.787     56.487   3.083   7.679 0.004167 ** 
+Segmentm                    -6.959     62.900   9.733  -0.111 0.914153    
+Segmentn                   -71.970     82.143   3.177  -0.876 0.442158    
+Segmentr                   205.194     75.292   4.550   2.725 0.045874 *  
+VarietyCG                  112.969     30.092 199.709   3.754 0.000228 ***
+Voweli                     -21.182     85.099   2.267  -0.249 0.824199    
+Segmentm:VarietyCG           1.558     35.434 587.464   0.044 0.964950    
+Segmentn:VarietyCG         -49.109     35.327 589.086  -1.390 0.165021    
+Segmentr:VarietyCG         -75.891     35.191 588.687  -2.157 0.031447 *  
+Segmentm:Voweli            -65.081    115.581   2.346  -0.563 0.622602    
+Segmentn:Voweli             40.713    127.084   2.064   0.320 0.778236    
+Segmentr:Voweli            -41.151    109.741   4.452  -0.375 0.724862    
+VarietyCG:Voweli           -71.146     35.475 587.892  -2.006 0.045361 *  
+Segmentm:VarietyCG:Voweli   36.643     50.349 588.801   0.728 0.467037    
+Segmentn:VarietyCG:Voweli   42.003     50.200 588.732   0.837 0.403090    
+Segmentr:VarietyCG:Voweli   61.034     50.427 588.526   1.210 0.226641    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: y ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f1
+
+REML criterion at convergence: 5603.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.1161 -0.3464  0.0046  0.2733  9.8295 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev. 
+ Speaker  (Intercept) 4.467e+00 2.114e+00
+ Keyword  (Intercept) 4.699e-16 2.168e-08
+ Residual             4.075e+02 2.019e+01
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)  
+(Intercept)                -7.9565     3.1516 539.6833  -2.525   0.0119 *
+Segmentm                    4.8663     4.4909 593.5152   1.084   0.2790  
+Segmentn                   -4.2984     4.4909 593.5152  -0.957   0.3389  
+Segmentr                    4.2261     4.4605 589.9415   0.947   0.3438  
+VarietyCG                   0.8511     4.4566 541.6479   0.191   0.8486  
+Voweli                      8.1925     4.4899 590.5546   1.825   0.0686 .
+Segmentm:VarietyCG         -7.9041     6.3095 590.7735  -1.253   0.2108  
+Segmentn:VarietyCG         -3.8732     6.3095 590.7735  -0.614   0.5395  
+Segmentr:VarietyCG          4.1030     6.2878 588.9154   0.653   0.5143  
+Segmentm:Voweli           -10.5028     6.3878 590.6394  -1.644   0.1007  
+Segmentn:Voweli             2.1387     6.3878 590.6394   0.335   0.7379  
+Segmentr:Voweli             0.4147     6.4085 589.0175   0.065   0.9484  
+VarietyCG:Voweli           -1.7541     6.3285 589.5088  -0.277   0.7817  
+Segmentm:VarietyCG:Voweli   8.4372     8.9898 589.1029   0.939   0.3484  
+Segmentn:VarietyCG:Voweli   2.2671     8.9761 589.2665   0.253   0.8007  
+Segmentr:VarietyCG:Voweli  -4.6743     9.0192 588.4916  -0.518   0.6045  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: x ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f1
+
+REML criterion at convergence: 1814.1
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.9158 -0.3411 -0.0130  0.3750  6.1745 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept) 0.004735 0.06881 
+ Keyword  (Intercept) 0.000000 0.00000 
+ Residual             0.961787 0.98071 
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                           Estimate Std. Error        df t value Pr(>|t|)   
+(Intercept)                 0.47897    0.15214 554.61005   3.148  0.00173 **
+Segmentm                   -0.12986    0.21814 593.74333  -0.595  0.55186   
+Segmentn                    0.24474    0.21814 593.74333   1.122  0.26234   
+Segmentr                   -0.47229    0.21669 589.83673  -2.180  0.02968 * 
+VarietyCG                  -0.03594    0.21514 556.66295  -0.167  0.86739   
+Voweli                     -0.70275    0.21811 590.49585  -3.222  0.00134 **
+Segmentm:VarietyCG          0.40637    0.30650 590.75123   1.326  0.18541   
+Segmentn:VarietyCG          0.23163    0.30650 590.75123   0.756  0.45011   
+Segmentr:VarietyCG         -0.15271    0.30547 588.71648  -0.500  0.61733   
+Segmentm:Voweli             0.62537    0.31031 590.59564   2.015  0.04432 * 
+Segmentn:Voweli             0.07399    0.31031 590.59564   0.238  0.81161   
+Segmentr:Voweli             0.13209    0.31133 588.82010   0.424  0.67152   
+VarietyCG:Voweli            0.10522    0.30744 589.37135   0.342  0.73228   
+Segmentm:VarietyCG:Voweli  -0.58314    0.43674 588.91741  -1.335  0.18232   
+Segmentn:VarietyCG:Voweli  -0.22176    0.43607 589.09834  -0.509  0.61126   
+Segmentr:VarietyCG:Voweli   0.15502    0.43818 588.24604   0.354  0.72363   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: z ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f2
+
+REML criterion at convergence: 8706.1
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.3594 -0.4451  0.0475  0.4490  5.5685 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)  8585     92.65  
+ Keyword  (Intercept) 55910    236.45  
+ Residual             53687    231.70  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)               1460.449    158.817    4.545   9.196 0.000417 ***
+Segmentm                    42.508    148.826   38.691   0.286 0.776692    
+Segmentn                     4.218    219.932   10.195   0.019 0.985070    
+Segmentr                   174.679    191.682   17.005   0.911 0.374879    
+VarietyCG                  -70.750     58.921  259.327  -1.201 0.230940    
+Voweli                     592.295    252.304    3.570   2.348 0.086604 .  
+Segmentm:VarietyCG         195.132     73.106  588.858   2.669 0.007814 ** 
+Segmentn:VarietyCG          46.414     72.820  588.510   0.637 0.524127    
+Segmentr:VarietyCG          82.887     72.552  588.132   1.142 0.253735    
+Segmentm:Voweli           -761.425    343.879    3.359  -2.214 0.104090    
+Segmentn:Voweli           -382.769    380.100    3.600  -1.007 0.376738    
+Segmentr:Voweli           -492.279    278.753   18.438  -1.766 0.093948 .  
+VarietyCG:Voweli          -104.019     73.192  588.280  -1.421 0.155797    
+Segmentm:VarietyCG:Voweli  115.787    103.791  588.327   1.116 0.265058    
+Segmentn:VarietyCG:Voweli   68.305    103.438  587.963   0.660 0.509288    
+Segmentr:VarietyCG:Voweli   34.731    103.909  587.705   0.334 0.738313    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: y ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f2
+
+REML criterion at convergence: 6570.5
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.0168 -0.3538 -0.0011  0.3800  5.4534 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)   80.05   8.947  
+ Keyword  (Intercept)    0.00   0.000  
+ Residual             1866.90  43.208  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)                -5.2981     6.9682 457.8752  -0.760 0.447447    
+Segmentm                   20.9172     9.6209 592.4365   2.174 0.030090 *  
+Segmentn                    1.2763     9.6209 592.4365   0.133 0.894510    
+Segmentr                   16.8439     9.5512 589.9508   1.764 0.078327 .  
+VarietyCG                  -0.7731     9.8516 459.1856  -0.078 0.937482    
+Voweli                     38.9348     9.6149 590.4026   4.049 5.82e-05 ***
+Segmentm:VarietyCG         -1.7594    13.5119 590.5190  -0.130 0.896446    
+Segmentn:VarietyCG         15.2637    13.5119 590.5190   1.130 0.259084    
+Segmentr:VarietyCG         -8.6918    13.4623 589.2341  -0.646 0.518766    
+Segmentm:Voweli           -64.6212    13.6794 590.4456  -4.724 2.89e-06 ***
+Segmentn:Voweli           -43.3788    13.6794 590.4456  -3.171 0.001597 ** 
+Segmentr:Voweli           -46.0346    13.7209 589.3221  -3.355 0.000844 ***
+VarietyCG:Voweli          -21.8682    13.5505 589.6369  -1.614 0.107100    
+Segmentm:VarietyCG:Voweli  30.8093    19.2479 589.3735   1.601 0.109989    
+Segmentn:VarietyCG:Voweli   3.2820    19.2189 589.4830   0.171 0.864465    
+Segmentr:VarietyCG:Voweli  28.6758    19.3092 588.9549   1.485 0.138056    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: x ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f2
+
+REML criterion at convergence: 2924.5
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.2160 -0.3857 -0.0230  0.3354  5.0411 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept) 0.171    0.4135  
+ Keyword  (Intercept) 0.000    0.0000  
+ Residual             5.558    2.3575  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)   
+(Intercept)                 0.1720     0.3757 489.0841   0.458  0.64728   
+Segmentm                   -0.8979     0.5248 592.9245  -1.711  0.08763 . 
+Segmentn                    0.2119     0.5248 592.9245   0.404  0.68656   
+Segmentr                   -0.7065     0.5211 590.1269  -1.356  0.17568   
+VarietyCG                   0.0639     0.5312 490.6493   0.120  0.90429   
+Voweli                     -0.8197     0.5245 590.6266  -1.563  0.11864   
+Segmentm:VarietyCG          0.1115     0.7371 590.7699   0.151  0.87982   
+Segmentn:VarietyCG         -0.8863     0.7371 590.7699  -1.202  0.22969   
+Segmentr:VarietyCG          0.3194     0.7345 589.3212   0.435  0.66379   
+Segmentm:Voweli             2.0766     0.7463 590.6806   2.783  0.00557 **
+Segmentn:Voweli             1.1267     0.7463 590.6806   1.510  0.13164   
+Segmentr:Voweli             1.5641     0.7486 589.4146   2.089  0.03710 * 
+VarietyCG:Voweli            1.8023     0.7393 589.7774   2.438  0.01507 * 
+Segmentm:VarietyCG:Voweli  -2.4568     1.0501 589.4751  -2.339  0.01964 * 
+Segmentn:VarietyCG:Voweli  -0.4224     1.0486 589.5998  -0.403  0.68722   
+Segmentr:VarietyCG:Voweli  -2.3449     1.0535 589.0018  -2.226  0.02641 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: z ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f3
+
+REML criterion at convergence: 8903.3
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.5567 -0.4588  0.0824  0.5241  3.9657 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept) 23056    151.84  
+ Keyword  (Intercept)  4609     67.89  
+ Residual             71616    267.61  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                           Estimate Std. Error        df t value Pr(>|t|)   
+(Intercept)               2861.3643    80.9949    0.3758  35.328   0.1758   
+Segmentm                  -275.8058    99.7913    0.3710  -2.764   0.4590   
+Segmentn                  -321.0443   107.9264    0.2323  -2.975   0.5675   
+Segmentr                   -58.5021   105.4775    0.2639  -0.555   0.7964   
+VarietyCG                 -171.8903    75.7557  153.0274  -2.269   0.0247 * 
+Voweli                     -28.9169   107.7502    0.2287  -0.268   0.8947   
+Segmentm:VarietyCG         181.0224    83.9003  573.6792   2.158   0.0314 * 
+Segmentn:VarietyCG         119.8586    83.8169  587.9893   1.430   0.1532   
+Segmentr:VarietyCG         118.6686    83.4801  587.3287   1.422   0.1557   
+Segmentm:Voweli            -20.0251   150.1983    0.2511  -0.133   0.9434   
+Segmentn:Voweli            131.4265   155.7215    0.2106   0.844   0.7605   
+Segmentr:Voweli            119.4843   151.9684    0.2542   0.786   0.7468   
+VarietyCG:Voweli           222.6577    84.0670  583.5180   2.649   0.0083 **
+Segmentm:VarietyCG:Voweli -215.7612   119.3889  585.4489  -1.807   0.0712 . 
+Segmentn:VarietyCG:Voweli -186.8904   119.1547  588.4010  -1.568   0.1173   
+Segmentr:VarietyCG:Voweli -250.9328   119.6949  588.2619  -2.096   0.0365 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: y ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f3
+
+REML criterion at convergence: 6598.2
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.5858 -0.4224 -0.0804  0.3937  4.7172 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)   35.45   5.954  
+ Keyword  (Intercept)    0.00   0.000  
+ Residual             1983.75  44.539  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)  
+(Intercept)                 0.6362     7.0046 522.6053   0.091   0.9277  
+Segmentm                    8.1639     9.9115 593.4483   0.824   0.4105  
+Segmentn                  -14.2908     9.9115 593.4483  -1.442   0.1499  
+Segmentr                   16.5178     9.8430 590.2060   1.678   0.0939 .
+VarietyCG                   9.9467     9.9043 524.4360   1.004   0.3157  
+Voweli                     14.6470     9.9081 590.7714   1.478   0.1399  
+Segmentm:VarietyCG        -17.2955    13.9237 590.9569  -1.242   0.2147  
+Segmentn:VarietyCG         11.8391    13.9237 590.9569   0.850   0.3955  
+Segmentr:VarietyCG         -9.0469    13.8750 589.2739  -0.652   0.5146  
+Segmentm:Voweli           -33.3151    14.0965 590.8426  -2.363   0.0184 *
+Segmentn:Voweli           -10.1480    14.0965 590.8426  -0.720   0.4719  
+Segmentr:Voweli            -9.6686    14.1413 589.3728  -0.684   0.4944  
+VarietyCG:Voweli          -23.6908    13.9651 589.8079  -1.696   0.0903 .
+Segmentm:VarietyCG:Voweli  43.9675    19.8376 589.4473   2.216   0.0270 *
+Segmentn:VarietyCG:Voweli   3.3231    19.8074 589.5942   0.168   0.8668  
+Segmentr:VarietyCG:Voweli   7.4314    19.9019 588.8952   0.373   0.7090  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: x ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f3
+
+REML criterion at convergence: 2888.2
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.4255 -0.3871  0.0433  0.4393  6.3553 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept) 0.1763   0.4199  
+ Keyword  (Intercept) 0.0000   0.0000  
+ Residual             5.2344   2.2879  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)  
+(Intercept)                -0.006621   0.365639 480.199754  -0.018   0.9856  
+Segmentm                   -0.387975   0.509343 592.441407  -0.762   0.4465  
+Segmentn                    0.926221   0.509343 592.441407   1.818   0.0695 .
+Segmentr                   -0.939873   0.505704 589.698788  -1.859   0.0636 .
+VarietyCG                  -0.523628   0.516960 481.712123  -1.013   0.3116  
+Voweli                     -0.476806   0.509069 590.190886  -0.937   0.3493  
+Segmentm:VarietyCG          0.838291   0.715393 590.328212   1.172   0.2418  
+Segmentn:VarietyCG         -0.972805   0.715393 590.328212  -1.360   0.1744  
+Segmentr:VarietyCG          0.292179   0.712807 588.908715   0.410   0.6820  
+Segmentm:Voweli             1.494108   0.724263 590.242358   2.063   0.0396 *
+Segmentn:Voweli             0.320281   0.724263 590.242358   0.442   0.6585  
+Segmentr:Voweli             0.627093   0.726492 589.001754   0.863   0.3884  
+VarietyCG:Voweli            1.145670   0.717462 589.355101   1.597   0.1108  
+Segmentm:VarietyCG:Voweli  -2.118838   1.019134 589.060369  -2.079   0.0380 *
+Segmentn:VarietyCG:Voweli   0.464136   1.017595 589.182204   0.456   0.6485  
+Segmentr:VarietyCG:Voweli  -0.426157   1.022401 588.596916  -0.417   0.6770  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: z ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f4
+
+REML criterion at convergence: 9895.3
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.0908 -0.4506  0.0914  0.5750  1.7956 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)  17206   131.2   
+ Keyword  (Intercept)      0     0.0   
+ Residual             377605   614.5   
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)               3727.788     99.360  450.014  37.518   <2e-16 ***
+Segmentm                  -208.830    136.835  592.057  -1.526   0.1275    
+Segmentn                  -168.325    136.835  592.057  -1.230   0.2191    
+Segmentr                    17.771    135.839  589.612   0.131   0.8960    
+VarietyCG                  -43.941    140.474  451.274  -0.313   0.7546    
+Voweli                     -77.185    136.746  590.058  -0.564   0.5727    
+Segmentm:VarietyCG         153.709    192.170  590.171   0.800   0.4241    
+Segmentn:VarietyCG          95.151    192.170  590.171   0.495   0.6207    
+Segmentr:VarietyCG           5.678    191.463  588.907   0.030   0.9764    
+Segmentm:Voweli            234.978    194.552  590.100   1.208   0.2276    
+Segmentn:Voweli            405.415    194.552  590.100   2.084   0.0376 *  
+Segmentr:Voweli            273.308    195.139  588.995   1.401   0.1619    
+VarietyCG:Voweli           184.615    192.717  589.303   0.958   0.3385    
+Segmentm:VarietyCG:Voweli -397.894    273.745  589.045  -1.454   0.1466    
+Segmentn:VarietyCG:Voweli -407.841    273.334  589.152  -1.492   0.1362    
+Segmentr:VarietyCG:Voweli -325.323    274.617  588.634  -1.185   0.2366    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: y ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f4
+
+REML criterion at convergence: 7133.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.8485 -0.4097  0.0054  0.4307  4.5030 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)   82.73   9.095  
+ Keyword  (Intercept) 4154.80  64.458  
+ Residual             4636.56  68.092  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)   
+(Intercept)                -32.657     43.553    3.316  -0.750   0.5030   
+Segmentm                    28.098     42.198   28.152   0.666   0.5109   
+Segmentn                    45.323     61.019    7.207   0.743   0.4811   
+Segmentr                    73.882     54.330   11.084   1.360   0.2009   
+VarietyCG                   36.713     15.282  529.975   2.402   0.0166 * 
+Voweli                      98.995     69.658    2.669   1.421   0.2609   
+Segmentm:VarietyCG         -47.099     21.463  590.331  -2.194   0.0286 * 
+Segmentn:VarietyCG         -61.147     21.385  589.823  -2.859   0.0044 **
+Segmentr:VarietyCG         -43.594     21.313  588.740  -2.045   0.0413 * 
+Segmentm:Voweli            -94.704     94.924    2.535  -0.998   0.4039   
+Segmentn:Voweli           -114.236    104.658    2.662  -1.092   0.3639   
+Segmentr:Voweli           -198.725     79.034   11.960  -2.514   0.0272 * 
+VarietyCG:Voweli           -42.473     21.494  589.118  -1.976   0.0486 * 
+Segmentm:VarietyCG:Voweli   48.432     30.483  589.397   1.589   0.1126   
+Segmentn:VarietyCG:Voweli   74.797     30.382  588.902   2.462   0.0141 * 
+Segmentr:VarietyCG:Voweli   39.310     30.527  588.232   1.288   0.1983   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: x ~ Segment * Variety * Vowel + (1 | Speaker) + (1 | Keyword)
+   Data: all.f4
+
+REML criterion at convergence: 3485.2
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.4878 -0.4759 -0.0175  0.4670  3.7782 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Speaker  (Intercept)  0.2545  0.5045  
+ Keyword  (Intercept) 12.9990  3.6054  
+ Residual             13.6309  3.6920  
+Number of obs: 642, groups:  Speaker, 40; Keyword, 8
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)   
+(Intercept)                 2.2615     2.4120   3.4162   0.938   0.4099   
+Segmentm                   -1.7837     2.3047  31.0777  -0.774   0.4448   
+Segmentn                   -2.4649     3.3563   7.9015  -0.734   0.4839   
+Segmentr                   -5.0211     2.9796  12.2551  -1.685   0.1172   
+VarietyCG                  -2.2301     0.8295 528.3286  -2.689   0.0074 **
+Voweli                     -4.7985     3.8664   2.7570  -1.241   0.3097   
+Segmentm:VarietyCG          2.8354     1.1639 590.5035   2.436   0.0151 * 
+Segmentn:VarietyCG          3.1857     1.1597 589.8553   2.747   0.0062 **
+Segmentr:VarietyCG          2.2089     1.1557 588.8095   1.911   0.0565 . 
+Segmentm:Voweli             5.1054     5.2721   2.6081   0.968   0.4139   
+Segmentn:Voweli             5.7047     5.8093   2.7712   0.982   0.4039   
+Segmentr:Voweli            11.2293     4.3325  13.3297   2.592   0.0220 * 
+VarietyCG:Voweli            2.3177     1.1656 589.3273   1.988   0.0472 * 
+Segmentm:VarietyCG:Voweli  -3.4517     1.6530 589.4042  -2.088   0.0372 * 
+Segmentn:VarietyCG:Voweli  -3.2943     1.6475 588.8868  -2.000   0.0460 * 
+Segmentr:VarietyCG:Voweli  -2.0783     1.6553 588.2256  -1.256   0.2098   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

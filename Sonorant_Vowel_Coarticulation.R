@@ -16,6 +16,7 @@ options(xtable.timestamp = "")
 # options defaults
 options(digits=2)
 options(scipen=999)
+options(width=1000)
 # Set Graphics
 opar <- par()      # make a copy of current settings
 lwd = 2
@@ -107,9 +108,6 @@ dur <- function(x)
 }
 
 
-
-fm <- subset(fm, Position == "Initial")
-fm <- subset(fm, Stress == "Unstressed")
 fm <- droplevels(fm)
 
 
@@ -158,7 +156,6 @@ all.f3 <- fm[c(grep("F3.05", colnames(fm), fixed = T):grep("F3.95", colnames(fm)
 all.f3 <- cbind(all.f3, as.data.frame(calculatepoly(all.f3[1:19])))
 
 
-
 all.f4 <- fm[c(grep("F4.05", colnames(fm), fixed = T):grep("F4.95", colnames(fm), fixed = T),
                grep("file", colnames(fm)),
                grep("Variety", colnames(fm)),
@@ -193,32 +190,32 @@ polyformants <- cbind(all.f1, all.f2,all.f3, all.f4,all.f5)
 
 
 #sink("results.txt", append=FALSE)
-options(width=1000)
-f1.z <- lmer(z ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f1)
+
+f1.z <- lmer(z ~  Segment * Variety * Vowel * Stress  + (1|Speaker)+ (1|Keyword), data=all.f1)
 summary(f1.z)
-f1.y <- lmer(y ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f1 )
+f1.y <- lmer(y ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f1 )
 summary(f1.y)
-f1.x <- lmer(x ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f1 )
+f1.x <- lmer(x ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f1 )
 summary(f1.x)
 
-f2.z <- lmer(z ~  Segment *  Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f2)
+f2.z <- lmer(z ~  Segment *  Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f2)
 summary(f2.z)
-f2.y <- lmer(y ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f2)
+f2.y <- lmer(y ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f2)
 summary(f2.y)
-f2.x <- lmer(x ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f2)
+f2.x <- lmer(x ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f2)
 summary(f2.x)
 
-f3.z <- lmer(z ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f3)
+f3.z <- lmer(z ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f3)
 summary(f3.z)
-f3.y <- lmer(y ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f3)
+f3.y <- lmer(y ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f3)
 summary(f3.y)
-f3.x <- lmer(x ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f3)
+f3.x <- lmer(x ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f3)
 summary(f3.x)
 
-f4.z <- lmer(z ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f4)
+f4.z <- lmer(z ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f4)
 summary(f4.z)
-f4.y <- lmer(y ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f4)
+f4.y <- lmer(y ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f4)
 summary(f4.y)
-f4.x <- lmer(x ~  Segment * Variety * Vowel + (1|Speaker) + (1|Keyword), data=all.f4)
+f4.x <- lmer(x ~  Segment * Variety * Vowel * Stress + (1|Speaker) + (1|Keyword), data=all.f4)
 summary(f4.x)
 
